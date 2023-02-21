@@ -4,7 +4,7 @@ vim = vim
 
 require "nvim.options"
 
-require "nvim.keymaps"
+require "nvim.remaps"
 
 require "nvim.plugins.bootstrap"
 
