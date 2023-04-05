@@ -8,9 +8,10 @@ map("n", "Q", "B", opts)
 map("n", "gh", "^", opts)
 map("n", "gl", "$", opts)
 map("n", "gf", "0", opts)
-map("n", "gj", "G", opts)
+
 map("n", "U", "<c-r>", opts)
 map("n", "B", "<c-v>", opts)
+
 map("n", "<c-n>", ":BufferNext<cr>", opts)
 map("n", "<c-p>", ":BufferPrevious<cr>", opts)
 map("n", "<c-m>", ":BufferPrevious<cr>", opts)
@@ -24,7 +25,6 @@ map("v", "Q", "B", opts)
 map("v", "gh", "^", opts)
 map("v", "gl", "$", opts)
 map("v", "gf", "0", opts)
-map("v", "gj", "G", opts)
 
 -- terminal mode
 map("t", "<esc>", [[<c-\><c-n>]], opts)

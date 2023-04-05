@@ -2,7 +2,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 return {
     {
-        "sumneko_lua",
+        "lua_ls",
         config = function(on_attach, lsp_flags)
             return {
                 on_attach = on_attach,

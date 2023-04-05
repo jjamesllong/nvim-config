@@ -13,7 +13,7 @@ require("nvim-tree").setup {
     sync_root_with_cwd = true,
     reload_on_bufenter = false,
     respect_buf_cwd = false,
-    on_attach = "disable",
+    on_attach = "default",
     remove_keymaps = false,
     select_prompts = false,
     view = {
@@ -49,11 +49,11 @@ require("nvim-tree").setup {
     renderer = {
         add_trailing = false,
         group_empty = false,
-        highlight_git = true,
+        highlight_git = false,
         full_name = false,
         highlight_opened_files = "none",
         highlight_modified = "none",
-        root_folder_label = [[:~:s?$?\\..?]],
+        root_folder_label = ":~:s?$?/..?",
         indent_width = 2,
         indent_markers = {
             enable = false,
@@ -69,7 +69,7 @@ require("nvim-tree").setup {
         icons = {
             webdev_colors = true,
             git_placement = "after",
-            modified_placement = "before",
+            modified_placement = "after",
             padding = " ",
             symlink_arrow = " ➛ ",
             show = {
@@ -77,7 +77,7 @@ require("nvim-tree").setup {
                 folder = true,
                 folder_arrow = true,
                 git = true,
-                modified = false,
+                modified = true,
             },
             glyphs = {
                 default = "",
@@ -123,10 +123,10 @@ require("nvim-tree").setup {
         args = {},
     },
     diagnostics = {
-        enable = true,
+        enable = false,
         show_on_dirs = false,
         show_on_open_dirs = true,
-        debounce_delay = 500,
+        debounce_delay = 50,
         severity = {
             min = vim.diagnostic.severity.HINT,
             max = vim.diagnostic.severity.ERROR,
@@ -147,12 +147,12 @@ require("nvim-tree").setup {
     },
     filesystem_watchers = {
         enable = true,
-        debounce_delay = 500,
+        debounce_delay = 50,
         ignore_dirs = {},
     },
     git = {
         enable = true,
-        ignore = false,
+        ignore = true,
         show_on_dirs = true,
         show_on_open_dirs = true,
         timeout = 400,
