@@ -8,8 +8,6 @@ return {
         end
     },
 
-    "nvim-tree/nvim-web-devicons",
-
     {
         "nvim-lualine/lualine.nvim",
         config = function()
@@ -29,10 +27,14 @@ return {
         "romgrk/barbar.nvim",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
+            "lewis6991/gitsigns.nvim",
         },
         config = function()
             require "nvim.plugins.setup.barbar_nvim"
-        end
+        end,
+        init = function()
+            vim.g.barbar_auto_setup = false
+        end,
     },
     {
         "williamboman/mason.nvim",
